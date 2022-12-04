@@ -1,5 +1,5 @@
-first_name = "Abraham"
-last_name = "Jones"
+first_name = "Kendall"
+last_name = "McCroy"
 pronoun = "The Great"
 
 full_name = first_name + " " + last_name + " " + pronoun
