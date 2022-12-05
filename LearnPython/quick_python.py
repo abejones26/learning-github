@@ -40,3 +40,32 @@ Kendall, Fab, Bryan = "Kendall", "Fab", "Bryan"
 print(Kendall)
 print(Fab)
 print(Bryan)
+
+# Create a variable called 'name' that holds a string
+name = "Abraham"
+
+# Create a variable called 'country' that holds a string
+
+# Create a variable called 'age' that holds an integer
+
+# Create a variable called 'hourly_wage' that holds an integer
+
+# Calculate the daily wage for the user
+
+# Create a variable called 'satisfied' that holds a boolean
+
+
+# Print out "Hello <name>!"
+print("Hello " + + "!")
+
+# Print out what country the user entered
+print("You live in " +)
+
+# Print out the user's age
+print("You are " + str() + " years old")
+
+# With an f-string, print out the daily wage that was calculated
+print(f"You make { } per day")
+
+# With an f-string, print out whether the users were satisfied
+print(f"Are you satisfied with your current wage? { }")
