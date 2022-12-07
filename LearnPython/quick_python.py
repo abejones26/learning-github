@@ -1,93 +1,92 @@
-x = 1
-y = 10
+# Create a variable and set it as an List
+import random
+myList = ["Jacob", 25, "John", 80]
+# print(myList)
 
-# Checks if one value is equal to another
-if x == 1:
-    print("x is equal to 1 - Abe is smart")
+# Adds an element onto the end of a List
+myList.append("Matt")
+print(myList)
 
-# Checks if one value is NOT equal to another
-if y != 1:
-    print("y is not equal to 1")
+# Returns the index of the first object with a matching value
+print(myList.index("Matt"))
 
-# Checks if one value is less than another
-if x < y:
-    print("x is less than y")
+# Changes a specified element within an List at the given index
+# ['Jacob', 25, 'John', 80, 'Matt']
+# [1,2,3,4,5] # Value counts
+# [0,1,2,3,4] # Offset of a value count - this is how the computer read lines
 
-# Checks if one value is greater than another
-if y > x:
-    print("y is greater than x")
+myList[3] = 85
+print(myList)
 
-# Checks if a value is less than or equal to another
-if x >= 1:
-    print("x is greater than or equal to 1")
+# Returns the length of the List
+print(len(myList))
 
-# Checks for two conditions to be met using "and"
-if x == 1 and y == 10:
-    print("Both values returned true")
+# Removes a specified object from an List
+myList.remove("Matt")
+print(myList)
 
-# Checks if either of two conditions is met
-if x < 45 or y < 5:
-    print("One or more of the statements were true")
+# Removes the object at the index specified
+myList.pop(0)  # [25, 'John', 85]
+myList.pop(0)  # ['John', 85]
+myList.pop(0)  # [85]
+print(myList)
 
-# Nested if statements
-if x < 10:
-    if y < 5:
-        print("x is less than 10 and y is less than 5")
-    elif y == 5:
-        print("x is less than 10 and y is equal to 5")
-    else:
-        print("x is less than 10 and y is greater than 5")
+# Creates a tuple, a sequence of immutable Python objects that cannot be changed
+myTuple = ('Python', 100, 'VBA', False)
+print(myTuple)
 
+# Student Activity start here
+print("This is our random number: " + str(random.randint(0, 9)))
 
-# 1. oooo needs some work
-x =
-if 2 * x > 10:
-    print("Question 1 works!")
-else:
-    print("oooo needs some work")
+# Print Title
+print("Let's Play Rock Paper Scissors!")
 
-# 2. Question 2 works!
-x =
-if len("Dog") < x:
-    print("Question 2 works!")
-else:
-    print("Still missing out")
+# Specify the three options
+options = []
 
-# 3. GOT QUESTION 3!
-x =
-y =
-if (x ** 3 >= y) and (y ** 2 < 26):
-    print("GOT QUESTION 3!")
-else:
-    print("Oh good you can count")
+# Computer Selection
+computer_choice = random.choice()
 
-# 4. Dan is in group three
-name =
-group_one = ["Greg", "Tony", "Susan"]
-group_two = ["Gerald", "Paul", "Ryder"]
-group_three = ["Carla", "Dan", "Jefferson"]
+# User Selection
+user_choice = input("Make your Choice: (r)ock, (p)aper, (s)cissors? ")
 
-if name in group_one:
-    print(name + " is in the first group")
-elif name in group_two:
-    print(name + " is in group two")
-elif name in group_three:
-    print(name + " is in group three")
-else:
-    print(name + " does not have a group")
+# Run Conditionals
+if (user_choice == "r" and computer_choice == "p"):
+    print("You chose rock. The computer chose paper.")
+    print("Sorry. You lose.")
 
-# 5. Can ride bumper cars
-height =
-age =
-adult_permission =
+elif (user_choice == "r" and computer_choice == "s"):
+    print("You chose rock. The computer chose scissors.")
+    print("Yay! You won.")
 
-if (height > 70) and (age >= 18):
-    print("Can ride all the roller coasters")
-elif (height > 65) and (age >= 18):
-    print("Can ride moderate roller coasters")
-elif (height > 60) and (age >= 18):
-    print("Can ride light roller coasters")
-elif ((height > 50) and (age >= 18)) or ((adult_permission) and (height > 50)):
-    print("Can ride bumper cars")
-else:
-    print("Stick to lazy river")
+elif (user_choice == "r" and computer_choice == "r"):
+    print("You chose rock. The computer chose rock.")
+    print("A smashing tie!")
+
+elif (user_choice == "p" and computer_choice == "p"):
+    print("You chose paper. The computer chose paper.")
+    print("A smashing tie!")
+
+# elif (user_choice == "p" and computer_choice == "s"):
+#     # print("You chose paper. The computer chose scissors.")
+#     # print("Sorry. You lose.")
+
+# elif (user_choice == "p" and computer_choice == "r"):
+#     # print("You chose paper. The computer chose rock.")
+#     # print("Yay! You won.")
+
+# elif (user_choice == "s" and computer_choice == "p"):
+#     # print("You chose scissors. The computer chose paper.")
+#     # print("Yay! You won.")
+
+# elif (user_choice == "s" and computer_choice == "s"):
+#     # print("You chose scissors. The computer chose scissors.")
+#     # print("A smashing tie!")
+
+# elif (user_choice == "s" and computer_choice == "r"):
+#     # print("You chose scissors. The computer chose rock.")
+#     # print("Sorry. You lose.")
+
+# else:
+#     # print("I don't understand that!")
+#     # print("Next time, choose from 'r', 'p', or 's'.")
