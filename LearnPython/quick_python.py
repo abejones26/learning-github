@@ -1,92 +1,103 @@
-# Create a variable and set it as an List
-import random
-myList = ["Jacob", 25, "John", 80]
-# print(myList)
+# # Loop through a range of numbers (0 through 4)
+# for x in range(5):
+#     print(x)
 
-# Adds an element onto the end of a List
-myList.append("Matt")
-print(myList)
+# print("-----------------------------------------")
 
-# Returns the index of the first object with a matching value
-print(myList.index("Matt"))
+# Loop through a range of numbers (2 through 6 - yes 6! Up to, but not including, 7)
+# for x in range(2, 7):
+#     print(x)
 
-# Changes a specified element within an List at the given index
-# ['Jacob', 25, 'John', 80, 'Matt']
-# [1,2,3,4,5] # Value counts
-# [0,1,2,3,4] # Offset of a value count - this is how the computer read lines
+# print("----------------------------------------")
 
-myList[3] = 85
-print(myList)
+# Iterate through letters in a string
+# word = ["Peace", "World"]
+# for letters in word:
+#     print(letters)
 
-# Returns the length of the List
-print(len(myList))
+# print("----------------------------------------")
 
-# Removes a specified object from an List
-myList.remove("Matt")
-print(myList)
+# # Iterate through a list
+# zoo = ["cow", "dog", "bee", "zebra"]
+# for animal in zoo:
+#     print(animal)
 
-# Removes the object at the index specified
-myList.pop(0)  # [25, 'John', 85]
-myList.pop(0)  # ['John', 85]
-myList.pop(0)  # [85]
-print(myList)
+# print("----------------------------------------")
 
-# Creates a tuple, a sequence of immutable Python objects that cannot be changed
-myTuple = ('Python', 100, 'VBA', False)
-print(myTuple)
+# # Loop while a condition is being met
+# run = "y"
 
-# Student Activity start here
-print("This is our random number: " + str(random.randint(0, 9)))
+# while run == "y":
+#     print("Hi!")
+#     run = input("To run again. Enter 'y'")
 
-# Print Title
-print("Let's Play Rock Paper Scissors!")
+# old_name = ['Abe', 'Kendall', 'Fab', 'John']
 
-# Specify the three options
-options = []
+# new_name = []
 
-# Computer Selection
-computer_choice = random.choice()
+# for name in old_name:
+#     # print(name)
+#     new_name.append(f'{name} Jones')
+#     print(new_name)
 
-# User Selection
-user_choice = input("Make your Choice: (r)ock, (p)aper, (s)cissors? ")
+import pandas as pd
 
-# Run Conditionals
-if (user_choice == "r" and computer_choice == "p"):
-    print("You chose rock. The computer chose paper.")
-    print("Sorry. You lose.")
+# Dataframe = ['dfm1_', 'dfm2_']
+# Dataflow = '[dfw_]'
 
-elif (user_choice == "r" and computer_choice == "s"):
-    print("You chose rock. The computer chose scissors.")
-    print("Yay! You won.")
+# table = 'tbl_'
+# staging = 'stg_'
+# reporting = 'rpt_'
 
-elif (user_choice == "r" and computer_choice == "r"):
-    print("You chose rock. The computer chose rock.")
-    print("A smashing tie!")
+# stg_tbl_dfw_testing = 'some table'
 
-elif (user_choice == "p" and computer_choice == "p"):
-    print("You chose paper. The computer chose paper.")
-    print("A smashing tie!")
+dfm1 = {
+    'First Name': [],
+    'Last Name': []
+}
 
-# elif (user_choice == "p" and computer_choice == "s"):
-#     # print("You chose paper. The computer chose scissors.")
-#     # print("Sorry. You lose.")
+first_name = ['Abe', 'Bryan', 'Fab', 'Kendall', 'Marshall']
 
-# elif (user_choice == "p" and computer_choice == "r"):
-#     # print("You chose paper. The computer chose rock.")
-#     # print("Yay! You won.")
+for name in first_name:
+    dfm1['First Name'].append(name)
+    dfm1['Last Name'].append('Jones')
 
-# elif (user_choice == "s" and computer_choice == "p"):
-#     # print("You chose scissors. The computer chose paper.")
-#     # print("Yay! You won.")
+dfm2 = pd.DataFrame(dfm1)
 
-# elif (user_choice == "s" and computer_choice == "s"):
-#     # print("You chose scissors. The computer chose scissors.")
-#     # print("A smashing tie!")
+dfm3 = {
+    'First Name': [],
+    'Last Name': []
+}
 
-# elif (user_choice == "s" and computer_choice == "r"):
-#     # print("You chose scissors. The computer chose rock.")
-#     # print("Sorry. You lose.")
+count = 0
 
-# else:
-#     # print("I don't understand that!")
-#     # print("Next time, choose from 'r', 'p', or 's'.")
+# for name in dfm2.iterrows():
+# print(name)
+
+for index, row in dfm2.iterrows():
+    count += 1
+    if row[1] == 'Jones':
+        dfm3['First Name'].append(row[0])
+        dfm3['Last Name'].append(f'{row[1]}{count}')
+
+dfm3 = pd.DataFrame(dfm3)
+
+dfm4 = {
+    'First Name': [],
+    'Last Name': [],
+    'Full Name': []
+}
+
+for index2, row2 in dfm2.iterrows():
+    # print('Startpoint-----------------------------------------------------')
+    firstName = row2[0]
+    for index3, row3 in dfm3.iterrows():
+        # print(f'First Loop: {row2[0]}')
+        # print(f'Second Loop: {row3[0]}')
+        # print('Endpoint-------------------------------------------------------')
+        secondName = row3[1]
+    dfm4['First Name'].append(firstName)
+    dfm4['Last Name'].append(secondName)
+    dfm4['Full Name'].append(f'{firstName} {secondName}')
+
+print(pd.DataFrame(dfm4))
